@@ -1,0 +1,549 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Test1",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 444026857524152
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Fliping",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 477462203360882,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "FrontOutline"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-value",
+							"objectClass": "FrontOutline",
+							"sid": 664722651665325,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"shrink\"",
+								"start-value": "100",
+								"end-value": "-100",
+								"time": "Self.t",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 718046781230717
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 792557392732097,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "BackOutline"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-value",
+							"objectClass": "BackOutline",
+							"sid": 516374624407157,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"shrink\"",
+								"start-value": "100",
+								"end-value": "-100",
+								"time": "FrontOutline.t",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 204930503700390
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 158590318413470
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "FrontOutline",
+							"sid": 239464718043074,
+							"parameters": {
+								"instance-variable": "orig_width",
+								"value": "Self.Width"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "BackOutline",
+							"sid": 456460038805222,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "FrontOutline",
+							"sid": 126486526274915,
+							"parameters": {
+								"instance-variable": "t",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 639720791020817
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tweens-finished",
+							"objectClass": "FrontOutline",
+							"sid": 241521615127285,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"shrink\""
+							}
+						},
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 839387130923980,
+							"parameters": {
+								"object": "FrontOutline"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "FrontOutline",
+							"sid": 423614894883940,
+							"parameters": {
+								"instance-variable": "t",
+								"value": "Self.t * 1.5"
+							}
+						}
+					],
+					"sid": 209930537498264,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 873885722321173,
+									"parameters": {
+										"variable": "Test1",
+										"comparison": 2,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-value",
+									"objectClass": "FrontOutline",
+									"sid": 746573948122091,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"shrink\"",
+										"start-value": "100",
+										"end-value": "-100",
+										"time": "Self.t",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "yes",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 692367450359876
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 804869085680631
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 968801212420609,
+							"parameters": {
+								"variable": "Test1",
+								"value": "FrontOutline.t"
+							}
+						}
+					],
+					"sid": 236643325502674
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-playing",
+							"objectClass": "FrontOutline",
+							"sid": 977914353446095,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"shrink\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-width",
+							"objectClass": "FrontOutline",
+							"sid": 377223752279774,
+							"parameters": {
+								"width": "Self.orig_width * (Self.Tween.Value(\"shrink\")/100)"
+							}
+						},
+						{
+							"id": "set-width",
+							"objectClass": "BackOutline",
+							"sid": 908977079895016,
+							"parameters": {
+								"width": "FrontOutline.Width"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "BackOutline",
+							"sid": 366607834461311,
+							"parameters": {
+								"opacity": "FrontOutline.Tween.Value(\"shrink\") > 0 ? 0 : 100\n"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "FrontOutline",
+							"sid": 970248892342304,
+							"parameters": {
+								"opacity": "FrontOutline.Tween.Value(\"shrink\") > 0 ? 100 : 0"
+							}
+						}
+					],
+					"sid": 585182144089055
+				}
+			],
+			"sid": 723114862959932
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "interact E",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 835301102961497
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "Einteract",
+							"sid": 631556772569878,
+							"parameters": {
+								"y": "Player.Y- 39"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Einteract",
+							"sid": 277005154830148,
+							"parameters": {
+								"x": "Player.X "
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Einteract",
+							"sid": 180563360286416,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 135528592587094
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player",
+							"sid": 530878844293107,
+							"parameters": {
+								"object": "Door1Interact"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Door",
+							"sid": 966798529739082
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Einteract",
+							"sid": 121671831851521,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 893952621832873
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player",
+							"sid": 598477012095989,
+							"parameters": {
+								"object": "Door2Interact"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Door2",
+							"sid": 776554348439373
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Einteract",
+							"sid": 225766423783264,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 545577414039852
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player",
+							"sid": 446756997814404,
+							"parameters": {
+								"object": "Door3Interact"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Door3",
+							"sid": 314751208860229
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Einteract",
+							"sid": 493816885169367,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 828842380241016
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 321767360793738,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [],
+					"sid": 479150837924911,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Player",
+									"sid": 630211182245273,
+									"parameters": {
+										"object": "Door1Interact"
+									}
+								},
+								{
+									"id": "is-visible",
+									"objectClass": "Door",
+									"sid": 116788447099788
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 887627456030411,
+									"parameters": {
+										"layout": "Door1KeyCode layout"
+									}
+								}
+							],
+							"sid": 143542456703377
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 723432344491772,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [],
+					"sid": 462912133084372,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Player",
+									"sid": 384548865342305,
+									"parameters": {
+										"object": "Door2"
+									}
+								},
+								{
+									"id": "is-visible",
+									"objectClass": "Door",
+									"sid": 237567724524554
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 483266714516121,
+									"parameters": {
+										"layout": "Door1KeyCode layout"
+									}
+								}
+							],
+							"sid": 331613335768071
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 931888772723258,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [],
+					"sid": 338679607781993,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Player",
+									"sid": 679544081259858,
+									"parameters": {
+										"object": "Door3Interact"
+									}
+								},
+								{
+									"id": "is-visible",
+									"objectClass": "Door",
+									"sid": 895714989874492
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 673297299297023,
+									"parameters": {
+										"layout": "Door1KeyCode layout"
+									}
+								}
+							],
+							"sid": 717095902880941
+						}
+					]
+				}
+			],
+			"sid": 212345477832243
+		}
+	],
+	"sid": 519619491916340
+}

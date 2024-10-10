@@ -1,0 +1,50 @@
+{
+	"name": "Door1KeyCode Sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 789867144532296,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "KeyCode"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 139400898031497
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 522338307612387
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "Player",
+					"sid": 556714892058076,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Player",
+					"sid": 323529249651848,
+					"behaviorType": "8Direction"
+				}
+			],
+			"sid": 724940457989862
+		}
+	],
+	"sid": 996759580862778
+}
