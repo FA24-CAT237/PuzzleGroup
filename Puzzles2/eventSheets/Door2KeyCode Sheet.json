@@ -1,0 +1,59 @@
+{
+	"name": "Door2KeyCode Sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 431898995102288,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "KeyCode"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 178106978015829,
+					"parameters": {
+						"layout": "Puzzle2"
+					}
+				}
+			],
+			"sid": 404075151438330
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 479328033557722
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "Player",
+					"sid": 282516116337472,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Player",
+					"sid": 908085758337976,
+					"behaviorType": "8Direction"
+				}
+			],
+			"sid": 472970846179862
+		}
+	],
+	"sid": 543325260808423
+}
