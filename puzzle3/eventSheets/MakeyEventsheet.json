@@ -1,0 +1,344 @@
+{
+	"name": "MakeyEventsheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 805913903191799,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "hands",
+					"sid": 699619942356317,
+					"parameters": {
+						"instance-variable": "click",
+						"value": "1"
+					}
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "Sprite",
+					"sid": 425872904989214,
+					"parameters": {
+						"instance-variable": "change",
+						"value": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 886961202449648,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "hands",
+					"sid": 687242450692067,
+					"parameters": {
+						"instance-variable": "click",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 230101326084250
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "hands",
+					"sid": 150507891163323,
+					"parameters": {
+						"instance-variable": "click",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "hands",
+					"sid": 322008919699675,
+					"parameters": {
+						"frame-number": "1"
+					}
+				}
+			],
+			"sid": 255198907505378
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "hands",
+					"sid": 890582062435094,
+					"parameters": {
+						"instance-variable": "click",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "hands",
+					"sid": 857431516954950,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 943034901080041
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Sprite",
+					"sid": 273206370335875,
+					"parameters": {
+						"instance-variable": "change",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Sprite",
+					"sid": 264594713522336,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 490083143347737
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Sprite",
+					"sid": 207454952947341,
+					"parameters": {
+						"instance-variable": "change",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Sprite",
+					"sid": 741729390289729,
+					"parameters": {
+						"frame-number": "1"
+					}
+				}
+			],
+			"sid": 980485955214838
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Sprite",
+					"sid": 155417513252454,
+					"parameters": {
+						"instance-variable": "change",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Sprite",
+					"sid": 384981624352306,
+					"parameters": {
+						"frame-number": "2"
+					}
+				}
+			],
+			"sid": 320757322049030
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Sprite",
+					"sid": 352553681042318,
+					"parameters": {
+						"instance-variable": "change",
+						"comparison": 0,
+						"value": "3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Sprite",
+					"sid": 222366006910243,
+					"parameters": {
+						"frame-number": "3"
+					}
+				}
+			],
+			"sid": 505120168080609
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Sprite",
+					"sid": 731159733373199,
+					"parameters": {
+						"instance-variable": "change",
+						"comparison": 0,
+						"value": "4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Sprite",
+					"sid": 656793115004934,
+					"parameters": {
+						"frame-number": "4"
+					}
+				}
+			],
+			"sid": 527736153371521
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Sprite",
+					"sid": 406569119055524,
+					"parameters": {
+						"instance-variable": "change",
+						"comparison": 0,
+						"value": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Sprite",
+					"sid": 900789468641825,
+					"parameters": {
+						"frame-number": "5"
+					}
+				}
+			],
+			"sid": 800880165316942
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Sprite",
+					"sid": 623296006534428,
+					"parameters": {
+						"instance-variable": "change",
+						"comparison": 0,
+						"value": "6"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Sprite",
+					"sid": 325802024610103,
+					"parameters": {
+						"frame-number": "6"
+					}
+				}
+			],
+			"sid": 528570017601270
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Sprite",
+					"sid": 504047822481643,
+					"parameters": {
+						"instance-variable": "change",
+						"comparison": 0,
+						"value": "7"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Sprite",
+					"sid": 365965288540196,
+					"parameters": {
+						"frame-number": "7"
+					}
+				}
+			],
+			"sid": 328002427534764
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Sprite",
+					"sid": 595010194659040,
+					"parameters": {
+						"instance-variable": "change",
+						"comparison": 0,
+						"value": "8"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Sprite",
+					"sid": 870615886322293,
+					"parameters": {
+						"instance-variable": "change",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 509664194782207
+		}
+	],
+	"sid": 653877187427539
+}
