@@ -1,14 +1,14 @@
 {
-	"name": "test",
+	"name": "Puzzle2Interact",
 	"plugin-id": "Sprite",
-	"sid": 701048606579505,
+	"sid": 842167560245946,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "solid",
 			"name": "Solid",
-			"sid": 798725940022159
+			"sid": 577797922665609
 		}
 	],
 	"effectTypes": [],
@@ -25,13 +25,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7921805,
+						"imageSpriteId": 3250165,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 499493588177185,
+				"sid": 281008484089609,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
