@@ -1002,9 +1002,54 @@
 						"instance-variable": "isUnlock1",
 						"value": "true"
 					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Door1_Unlock",
+					"sid": 301329478278346,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 318457287598186,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Door1_Unlock",
+					"sid": 129292413179362,
+					"parameters": {
+						"visibility": "invisible"
+					}
 				}
 			],
 			"sid": 766499984349202
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 354279077640746
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Door1_Unlock",
+					"sid": 331635131310579,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 180695534756732
 		},
 		{
 			"eventType": "block",
@@ -1029,9 +1074,54 @@
 						"instance-variable": "isUnlock2",
 						"value": "true"
 					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Door2_Unlock",
+					"sid": 101132259538093,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 395934477935413,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Door2_Unlock",
+					"sid": 968825004447639,
+					"parameters": {
+						"visibility": "invisible"
+					}
 				}
 			],
 			"sid": 969919093801127
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 344244872035175
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Door2_Unlock",
+					"sid": 344025967208806,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 397877402530815
 		},
 		{
 			"eventType": "block",

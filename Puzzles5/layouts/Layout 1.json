@@ -1103,8 +1103,8 @@
 					"sid": 562234486050310,
 					"tags": "",
 					"instanceVariables": {
-						"isUnlock1": true,
-						"isUnlock2": true,
+						"isUnlock1": false,
+						"isUnlock2": false,
 						"isUnlock3": false
 					},
 					"behaviors": {
@@ -1823,7 +1823,61 @@
 			"name": "UI",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "Door1_Unlock",
+					"properties": {
+						"text": "Door 1 Unlocked. (Prees E on the Door to enter) ",
+						"enable-bbcode": true,
+						"font": "fantasy",
+						"size": 20,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 23,
+					"sid": 317999249326667,
+					"tags": "",
+					"instanceVariables": {
+						"numberLock": 0
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 317999249326667,
+						"expanded": true
+					},
+					"world": {
+						"x": 85.21268327297022,
+						"y": 215.64120413914196,
+						"width": 366.50957624797394,
+						"height": 70.34373535168129,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 690758257801288,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
