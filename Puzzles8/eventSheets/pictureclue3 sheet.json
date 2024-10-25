@@ -1,0 +1,60 @@
+{
+	"name": "pictureclue3 sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 400851898360924,
+					"parameters": {
+						"key": 69
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 188350944265220,
+					"parameters": {
+						"layout": "Layout 1"
+					}
+				}
+			],
+			"sid": 764770008596900
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 473435986698581
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "Player",
+					"sid": 660096717429363,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Player",
+					"sid": 624615238850034,
+					"parameters": {
+						"opacity": "0"
+					}
+				}
+			],
+			"sid": 513783357440977
+		}
+	],
+	"sid": 793425454086649
+}

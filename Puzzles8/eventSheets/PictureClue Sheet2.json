@@ -1,0 +1,60 @@
+{
+	"name": "PictureClue Sheet2",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 261053012962448,
+					"parameters": {
+						"key": 69
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 292654893057855,
+					"parameters": {
+						"layout": "Layout 1"
+					}
+				}
+			],
+			"sid": 665387304311540
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 667823389863340
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "Player",
+					"sid": 842120654007452,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Player",
+					"sid": 986459523331488,
+					"parameters": {
+						"opacity": "0"
+					}
+				}
+			],
+			"sid": 357897374002489
+		}
+	],
+	"sid": 566675904954583
+}
