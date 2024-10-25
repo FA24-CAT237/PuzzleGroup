@@ -1,0 +1,83 @@
+{
+	"name": "Door4KeyCode Sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 614977565192874,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "KeyCode"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 703701859799448,
+					"parameters": {
+						"layout": "Puzzle5"
+					}
+				}
+			],
+			"sid": 407143363195538
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 482938300645093
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "Player",
+					"sid": 116286314870553,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Player",
+					"sid": 792170577429101,
+					"behaviorType": "8Direction"
+				}
+			],
+			"sid": 964113067377543
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 318508525204968,
+					"parameters": {
+						"key": 69
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 872318564173573,
+					"parameters": {
+						"layout": "Layout 1"
+					}
+				}
+			],
+			"sid": 176609768750795
+		}
+	],
+	"sid": 383233024202531
+}
