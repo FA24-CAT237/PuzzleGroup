@@ -1,0 +1,17 @@
+{
+	"name": "Door1_Unlock",
+	"plugin-id": "Text",
+	"sid": 153775016168988,
+	"isGlobal": true,
+	"instanceVariables": [
+		{
+			"name": "numberLock",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 649282111243967
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

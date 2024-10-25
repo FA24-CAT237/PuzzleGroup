@@ -1,0 +1,84 @@
+{
+	"name": "Player",
+	"plugin-id": "Sprite",
+	"sid": 647057983626279,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "isUnlock1",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 445589478773517
+		},
+		{
+			"name": "isUnlock2",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 506894571874070
+		},
+		{
+			"name": "isUnlock3",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 269477417960246
+		},
+		{
+			"name": "isUnlock4",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 581990299230901
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 937643017832658
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 223098927334334
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 192891708951485
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1065081,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 356700526773449,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
