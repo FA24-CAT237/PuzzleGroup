@@ -1,5 +1,5 @@
 {
-	"name": "Door4KeyCode layout",
+	"name": "Puzzle3",
 	"layers": [
 		{
 			"name": "Layer 0",
@@ -7,7 +7,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Door4",
+					"type": "KeyCode",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -15,20 +15,13 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 133,
-					"sid": 474809990625079,
+					"uid": 82,
+					"sid": 220502238787284,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						}
-					},
+					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 474809990625079,
+						"sid": 220502238787284,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -37,10 +30,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 868,
-						"y": 510,
-						"width": 335.83282948278145,
-						"height": 340.9860274985233,
+						"x": 244,
+						"y": 272,
+						"width": 492.73698216509,
+						"height": 481.0286120025716,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -54,115 +47,39 @@
 					}
 				},
 				{
-					"type": "Puzzle1Interact",
+					"type": "txt_1",
 					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 127,
-					"sid": 568722830809403,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 568722830809403,
-						"expanded": true,
-						"folderName": "",
-						"indexInFolder": -1,
-						"folderNestingLevel": -1
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 1346.2876802575875,
-						"y": 482.31575320476014,
-						"width": 1700,
-						"height": 721.8048168638887,
-						"originX": 0.5,
-						"originY": 0.5,
+						"text": "0",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 32,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
 						"color": [
-							1,
-							1,
-							1,
+							0,
+							0,
+							0,
 							1
 						],
-						"angle": 1.5572600201344233,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Puzzle1Interact",
-					"properties": {
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
+						"origin": "top-left",
+						"read-aloud": false
 					},
-					"uid": 128,
-					"sid": 707279303128012,
+					"uid": 83,
+					"sid": 442086148495795,
 					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						}
+					"instanceVariables": {
+						"numberLock": 5
 					},
-					"instanceFolderItem": {
-						"sid": 707279303128012,
-						"expanded": true,
-						"folderName": "",
-						"indexInFolder": -1,
-						"folderNestingLevel": -1
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 379.93798969217124,
-						"y": 458.5664216549283,
-						"width": 1700,
-						"height": 747.0418683361677,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 1.5550332819716242,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "KeyCode",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 129,
-					"sid": 971596064423938,
-					"tags": "",
-					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 971596064423938,
+						"sid": 442086148495795,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -171,12 +88,54 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 956.5,
-						"y": 536.5,
-						"width": 77.13752518200646,
-						"height": 86.42563711855331,
-						"originX": 0.5,
-						"originY": 0.5,
+						"x": 229,
+						"y": 284,
+						"width": 35.10532098762003,
+						"height": 71.18578978045173,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "indicater",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 84,
+					"sid": 790528959235446,
+					"tags": "",
+					"instanceVariables": {
+						"id": 1
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 790528959235446,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 655,
+						"y": 236,
+						"width": 50.00134910179925,
+						"height": 37.50101182634943,
+						"originX": 0.2159090909090909,
+						"originY": 0.45454545454545453,
 						"color": [
 							1,
 							1,
@@ -196,8 +155,8 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 130,
-					"sid": 650996074096440,
+					"uid": 85,
+					"sid": 854976559611059,
 					"tags": "",
 					"instanceVariables": {
 						"isUnlock1": false,
@@ -231,7 +190,7 @@
 						}
 					},
 					"instanceFolderItem": {
-						"sid": 650996074096440,
+						"sid": 854976559611059,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -240,12 +199,150 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 830,
-						"y": 560,
+						"x": 500,
+						"y": 274,
 						"width": 38.810658450532465,
 						"height": 36.660305492081825,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Big_X",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 100,
+					"sid": 221329360681211,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 221329360681211,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 500,
+						"y": 285,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Button",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 101,
+					"sid": 318415190517897,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 318415190517897,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 246,
+						"y": 419,
+						"width": 250,
+						"height": 46,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "txt_2",
+					"properties": {
+						"text": "Confirm Button",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 102,
+					"sid": 634979060319217,
+					"tags": "",
+					"instanceVariables": {
+						"numberLock": 0
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 634979060319217,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 117,
+						"y": 448,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -281,15 +378,15 @@
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 132,
-					"sid": 268180210999388,
+					"uid": 124,
+					"sid": 235259090761603,
 					"tags": "",
 					"instanceVariables": {
 						"numberLock": 0
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 268180210999388,
+						"sid": 235259090761603,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -298,10 +395,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 507,
-						"y": 375,
-						"width": 135,
-						"height": 119,
+						"x": 350,
+						"y": 57,
+						"width": 138,
+						"height": 150,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -313,49 +410,9 @@
 						"angle": 0,
 						"zElevation": 0
 					}
-				},
-				{
-					"type": "PuzzleNote4",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 131,
-					"sid": 205630507856323,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 205630507856323,
-						"expanded": true,
-						"folderName": "",
-						"indexInFolder": -1,
-						"folderNestingLevel": -1
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 613,
-						"y": 543,
-						"width": 295,
-						"height": 276,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
 				}
 			],
-			"sid": 416316732142400,
+			"sid": 525215600290524,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -389,7 +446,7 @@
 		"items": [],
 		"subfolders": []
 	},
-	"sid": 180723712319532,
+	"sid": 346430287170815,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 1708,
@@ -398,5 +455,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Door4KeyCode Sheet"
+	"eventSheet": "Puzzle3 Sheet"
 }
