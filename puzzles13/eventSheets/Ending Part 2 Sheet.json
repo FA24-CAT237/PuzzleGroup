@@ -1,0 +1,27 @@
+{
+	"name": "Ending Part 2 Sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 655285614540476
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "DoorUnlockText",
+					"sid": 892207852423121,
+					"parameters": {
+						"text": "\"You have escaped (Thank for playing)\""
+					}
+				}
+			],
+			"sid": 825213684909197
+		}
+	],
+	"sid": 807026711404452
+}

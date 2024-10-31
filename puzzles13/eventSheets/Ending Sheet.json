@@ -1,0 +1,30 @@
+{
+	"name": "Ending Sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Player",
+					"sid": 439176983727629,
+					"parameters": {
+						"object": "Door3InteractOutSide"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 586784322826007,
+					"parameters": {
+						"layout": "Ending part2"
+					}
+				}
+			],
+			"sid": 587326452253257
+		}
+	],
+	"sid": 284596532846576
+}
