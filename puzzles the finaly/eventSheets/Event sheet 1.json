@@ -1,0 +1,2172 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Test1",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 444026857524152
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Fliping",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 477462203360882,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "FrontOutline"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-value",
+							"objectClass": "FrontOutline",
+							"sid": 664722651665325,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"shrink\"",
+								"start-value": "100",
+								"end-value": "-100",
+								"time": "Self.t",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 718046781230717
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 792557392732097,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "BackOutline"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-value",
+							"objectClass": "BackOutline",
+							"sid": 516374624407157,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"shrink\"",
+								"start-value": "100",
+								"end-value": "-100",
+								"time": "FrontOutline.t",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 204930503700390
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 158590318413470
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "FrontOutline",
+							"sid": 239464718043074,
+							"parameters": {
+								"instance-variable": "orig_width",
+								"value": "Self.Width"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "BackOutline",
+							"sid": 456460038805222,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "FrontOutline",
+							"sid": 126486526274915,
+							"parameters": {
+								"instance-variable": "t",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 639720791020817
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tweens-finished",
+							"objectClass": "FrontOutline",
+							"sid": 241521615127285,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"shrink\""
+							}
+						},
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 839387130923980,
+							"parameters": {
+								"object": "FrontOutline"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "FrontOutline",
+							"sid": 423614894883940,
+							"parameters": {
+								"instance-variable": "t",
+								"value": "Self.t * 1.5"
+							}
+						}
+					],
+					"sid": 209930537498264,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 873885722321173,
+									"parameters": {
+										"variable": "Test1",
+										"comparison": 2,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-value",
+									"objectClass": "FrontOutline",
+									"sid": 746573948122091,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"shrink\"",
+										"start-value": "100",
+										"end-value": "-100",
+										"time": "Self.t",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "yes",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 692367450359876
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 804869085680631
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 968801212420609,
+							"parameters": {
+								"variable": "Test1",
+								"value": "FrontOutline.t"
+							}
+						}
+					],
+					"sid": 236643325502674
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-playing",
+							"objectClass": "FrontOutline",
+							"sid": 977914353446095,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"shrink\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-width",
+							"objectClass": "FrontOutline",
+							"sid": 377223752279774,
+							"parameters": {
+								"width": "Self.orig_width * (Self.Tween.Value(\"shrink\")/100)"
+							}
+						},
+						{
+							"id": "set-width",
+							"objectClass": "BackOutline",
+							"sid": 908977079895016,
+							"parameters": {
+								"width": "FrontOutline.Width"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "BackOutline",
+							"sid": 366607834461311,
+							"parameters": {
+								"opacity": "FrontOutline.Tween.Value(\"shrink\") > 0 ? 0 : 100\n"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "FrontOutline",
+							"sid": 970248892342304,
+							"parameters": {
+								"opacity": "FrontOutline.Tween.Value(\"shrink\") > 0 ? 100 : 0"
+							}
+						}
+					],
+					"sid": 585182144089055
+				}
+			],
+			"sid": 723114862959932
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "interact E",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 835301102961497
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "Einteract",
+							"sid": 631556772569878,
+							"parameters": {
+								"y": "Player.Y- 39"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Einteract",
+							"sid": 277005154830148,
+							"parameters": {
+								"x": "Player.X "
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Einteract",
+							"sid": 180563360286416,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 135528592587094
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player",
+							"sid": 530878844293107,
+							"parameters": {
+								"object": "Door1InteractOutside"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Door",
+							"sid": 966798529739082
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Einteract",
+							"sid": 121671831851521,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 893952621832873
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player",
+							"sid": 598477012095989,
+							"parameters": {
+								"object": "Door2InteractOutside"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Door2",
+							"sid": 776554348439373
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Player",
+							"sid": 313916814838582,
+							"parameters": {
+								"instance-variable": "isUnlock1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Einteract",
+							"sid": 225766423783264,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 545577414039852
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player",
+							"sid": 446756997814404,
+							"parameters": {
+								"object": "Door3InteractOutSide"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Door3",
+							"sid": 314751208860229
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Player",
+							"sid": 904784154553714,
+							"parameters": {
+								"instance-variable": "isUnlock2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Einteract",
+							"sid": 493816885169367,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 828842380241016
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player",
+							"sid": 474395471471805,
+							"parameters": {
+								"object": "MakeyInteractOutSide"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Player",
+							"sid": 201340224823447,
+							"parameters": {
+								"instance-variable": "isUnlock3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Einteract",
+							"sid": 960499102310319,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 327015760123191
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player",
+							"sid": 729180642895063,
+							"parameters": {
+								"object": "Door4InteractOutSide"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Player",
+							"sid": 268843234775935,
+							"parameters": {
+								"instance-variable": "isUnlock4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Einteract",
+							"sid": 650889381052644,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 457984733575280
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player",
+							"sid": 229968989746645,
+							"parameters": {
+								"object": "FreedomDoorInteract"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Einteract",
+							"sid": 219728902648490,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 548425669951490
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 321767360793738,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [],
+					"sid": 479150837924911,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Player",
+									"sid": 630211182245273,
+									"parameters": {
+										"object": "Door1InteractOutside"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 902275741122484,
+									"parameters": {
+										"instance-variable": "isUnlock1"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 887627456030411,
+									"parameters": {
+										"layout": "Door1KeyCode layout"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 104264498507045,
+									"parameters": {
+										"audio-file": "266152__vacuumfan7072__cfup",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 143542456703377
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 723432344491772,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [],
+					"sid": 462912133084372,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Player",
+									"sid": 285259635931325,
+									"parameters": {
+										"object": "Door2InteractOutside"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 636326876152420,
+									"parameters": {
+										"instance-variable": "isUnlock2"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 795975189207825,
+									"parameters": {
+										"instance-variable": "isUnlock1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 249082923160856,
+									"parameters": {
+										"layout": "Door2KeyCode layout"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 748093467299173,
+									"parameters": {
+										"audio-file": "266152__vacuumfan7072__cfup",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 331613335768071
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 931888772723258,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [],
+					"sid": 338679607781993,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Player",
+									"sid": 679544081259858,
+									"parameters": {
+										"object": "Door3InteractOutSide"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 868725045567780,
+									"parameters": {
+										"instance-variable": "isUnlock3"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 844986182638401,
+									"parameters": {
+										"instance-variable": "isUnlock2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 209052757763024,
+									"parameters": {
+										"layout": "Door3KeyCode layout"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 747864166828734,
+									"parameters": {
+										"audio-file": "266152__vacuumfan7072__cfup",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 717095902880941
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 535427604567160,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [],
+					"sid": 233070600715212,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Player",
+									"sid": 276222636502595,
+									"parameters": {
+										"object": "MakeyInteractOutSide"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 694542854916509,
+									"parameters": {
+										"instance-variable": "isUnlock4"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 148544813100404,
+									"parameters": {
+										"instance-variable": "isUnlock3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 807107008609694,
+									"parameters": {
+										"layout": "Makeyscreen"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 817536422420260,
+									"parameters": {
+										"audio-file": "266152__vacuumfan7072__cfup",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 986729577184438
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 415339357561946,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [],
+					"sid": 297677209199359,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Player",
+									"sid": 656987293726049,
+									"parameters": {
+										"object": "FreedomDoorInteract"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 728581482943730,
+									"parameters": {
+										"layout": "Ending"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 921477751773917,
+									"parameters": {
+										"audio-file": "266152__vacuumfan7072__cfup",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 491988575264375
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 593477628836738,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [],
+					"sid": 351800291140980,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Player",
+									"sid": 524740087329350,
+									"parameters": {
+										"object": "Door4InteractOutSide"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 443994583005103,
+									"parameters": {
+										"instance-variable": "isUnlock5"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 359787673887194,
+									"parameters": {
+										"instance-variable": "isUnlock4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 755179725976426,
+									"parameters": {
+										"layout": "Door5KeyCode layout"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 688643830739221,
+									"parameters": {
+										"audio-file": "266152__vacuumfan7072__cfup",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 742108561018983
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Check if isUnlock is true and goes through the door"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player",
+							"sid": 903230384421193,
+							"parameters": {
+								"object": "Door1InteractInside"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Door",
+							"sid": 593868888509662
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Einteract",
+							"sid": 578113830747461,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 286222470247872
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player",
+							"sid": 535946833768327,
+							"parameters": {
+								"object": "Door2InteractInside"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Door2",
+							"sid": 180158150303568
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Einteract",
+							"sid": 969007724617158,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 365656268043496
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player",
+							"sid": 621318447560227,
+							"parameters": {
+								"object": "Door3InteractInside"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Door3",
+							"sid": 933118504686544
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Einteract",
+							"sid": 169129770049070,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 182136864670772
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player",
+							"sid": 611420087712451,
+							"parameters": {
+								"object": "Door4InteractInside"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Door4",
+							"sid": 661755986150736
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Einteract",
+							"sid": 894154953488479,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 214438572890144
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 287090285831621,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [],
+					"sid": 750346413534624,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Player",
+									"sid": 263655949112682,
+									"parameters": {
+										"object": "Door1InteractOutside"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 882790828443393,
+									"parameters": {
+										"instance-variable": "isUnlock1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Player",
+									"sid": 882510171555828,
+									"parameters": {
+										"x": "Door1InteractInside.X",
+										"y": "Door1InteractInside.Y"
+									}
+								}
+							],
+							"sid": 437477326085219
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 397616533030022
+								}
+							],
+							"actions": [],
+							"sid": 222829331000404,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "Player",
+											"sid": 828727287074920,
+											"parameters": {
+												"object": "Door1InteractInside"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Player",
+											"sid": 796712442867701,
+											"parameters": {
+												"x": "Door1InteractOutside.X",
+												"y": "Door1InteractOutside.Y"
+											}
+										}
+									],
+									"sid": 320697189373131
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 268579800299290,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [],
+					"sid": 888928806171657,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Player",
+									"sid": 978510413178660,
+									"parameters": {
+										"object": "Door2InteractOutside"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 303101947414288,
+									"parameters": {
+										"instance-variable": "isUnlock2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Player",
+									"sid": 557010569991243,
+									"parameters": {
+										"x": "Door2InteractInside.X",
+										"y": "Door2InteractInside.Y"
+									}
+								}
+							],
+							"sid": 576479265989186
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 165654807742502
+								}
+							],
+							"actions": [],
+							"sid": 405401287229707,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "Player",
+											"sid": 937238519751136,
+											"parameters": {
+												"object": "Door2InteractInside"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Player",
+											"sid": 843934354547363,
+											"parameters": {
+												"x": "Door2InteractOutside.X",
+												"y": "Door2InteractOutside.Y"
+											}
+										}
+									],
+									"sid": 942786333998559
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 300213365488398,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [],
+					"sid": 690491588798804,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Player",
+									"sid": 102404978464092,
+									"parameters": {
+										"object": "Door3InteractOutSide"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 477164969848836,
+									"parameters": {
+										"instance-variable": "isUnlock3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Player",
+									"sid": 653837016994720,
+									"parameters": {
+										"x": "Door3InteractInside.X",
+										"y": "Door3InteractInside.Y"
+									}
+								}
+							],
+							"sid": 793122818614425
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 889601066293039
+								}
+							],
+							"actions": [],
+							"sid": 660257237401443,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "Player",
+											"sid": 113977516429797,
+											"parameters": {
+												"object": "Door3InteractInside"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Player",
+											"sid": 215004043414261,
+											"parameters": {
+												"x": "Door3InteractOutside.X",
+												"y": "Door3InteractOutside.Y"
+											}
+										}
+									],
+									"sid": 285702050377676
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 303796430615124,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [],
+					"sid": 472671086591550,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Player",
+									"sid": 222119626907803,
+									"parameters": {
+										"object": "Door4InteractOutSide"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player",
+									"sid": 115740467963367,
+									"parameters": {
+										"instance-variable": "isUnlock5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Player",
+									"sid": 903835994727052,
+									"parameters": {
+										"x": "Door4InteractInside.X",
+										"y": "Door4InteractInside.Y"
+									}
+								}
+							],
+							"sid": 137131814644976
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 641860110567637
+								}
+							],
+							"actions": [],
+							"sid": 397587476822487,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "Player",
+											"sid": 945540103156303,
+											"parameters": {
+												"object": "Door4InteractInside"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Player",
+											"sid": 787095816805542,
+											"parameters": {
+												"x": "Door4InteractOutside.X",
+												"y": "Door4InteractOutside.Y"
+											}
+										}
+									],
+									"sid": 368735994463329
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 212345477832243
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 400855790738102,
+					"parameters": {
+						"variable": "isPuzzles1Done",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 382610254917899,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 734112881432413
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player",
+							"sid": 188296170632506,
+							"parameters": {
+								"instance-variable": "isUnlock1",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "DoorUnlockText",
+							"sid": 170588111852015,
+							"parameters": {
+								"text": "\"Door 1 Unlocked (Press E on the door to enter)\""
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "DoorUnlockText",
+							"sid": 689134099650255,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 330224408583145,
+							"parameters": {
+								"seconds": "2"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "DoorUnlockText",
+							"sid": 449980763098926,
+							"parameters": {
+								"opacity": "0"
+							}
+						}
+					],
+					"sid": 429037524361463
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 413556757054357
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "DoorUnlockText",
+					"sid": 895872811325824,
+					"parameters": {
+						"opacity": "0"
+					}
+				}
+			],
+			"sid": 989968901658237,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 797512385124995,
+					"parameters": {
+						"variable": "isPuzzles2Done",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 817200544088455,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 145299349743549
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player",
+							"sid": 986969230587007,
+							"parameters": {
+								"instance-variable": "isUnlock2",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 806325908801138,
+							"disabled": true,
+							"parameters": {
+								"seconds": "2"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "DoorUnlockText",
+							"sid": 838706845800752,
+							"parameters": {
+								"text": "\"Door 2 Unlocked (Press E on the door to enter)\""
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "DoorUnlockText",
+							"sid": 572627474082683,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 641352926582395,
+							"parameters": {
+								"seconds": "2"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "DoorUnlockText",
+							"sid": 601985884178274,
+							"parameters": {
+								"opacity": "0"
+							}
+						}
+					],
+					"sid": 268712981361308
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 270289735614313
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "DoorUnlockText",
+					"sid": 161123556880528,
+					"parameters": {
+						"opacity": "0"
+					}
+				}
+			],
+			"sid": 693012776406826,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 467333502162080,
+					"parameters": {
+						"variable": "isPuzzles3Done",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 633375381495270,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 347481902868552
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player",
+							"sid": 397074517608582,
+							"parameters": {
+								"instance-variable": "isUnlock3",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 436969105881304,
+							"disabled": true,
+							"parameters": {
+								"seconds": "2"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "DoorUnlockText",
+							"sid": 141724439379560,
+							"parameters": {
+								"text": "\"Door 3 Unlocked (Press E on the door to enter)\""
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "DoorUnlockText",
+							"sid": 968335188100161,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 633046444437887,
+							"parameters": {
+								"seconds": "2"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "DoorUnlockText",
+							"sid": 411562595794424,
+							"parameters": {
+								"opacity": "0"
+							}
+						}
+					],
+					"sid": 590130096238731
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 338209609999056
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "DoorUnlockText",
+					"sid": 668018938188870,
+					"parameters": {
+						"opacity": "0"
+					}
+				}
+			],
+			"sid": 144485851563182,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 469011553398190,
+					"parameters": {
+						"variable": "isPuzzles4Done",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 143458659346477,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 942596021585776
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player",
+							"sid": 656560201507737,
+							"parameters": {
+								"instance-variable": "isUnlock4",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 460054409397118,
+							"disabled": true,
+							"parameters": {
+								"seconds": "2"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "DoorUnlockText",
+							"sid": 481770592267725,
+							"parameters": {
+								"text": "\"Final Puzzles Unlock on Door 5\""
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "DoorUnlockText",
+							"sid": 343302432410856,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 983428197009825,
+							"parameters": {
+								"seconds": "2"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "DoorUnlockText",
+							"sid": 487255125039332,
+							"parameters": {
+								"opacity": "0"
+							}
+						}
+					],
+					"sid": 794297678807287
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 772247192739344
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "DoorUnlockText",
+					"sid": 325825775575954,
+					"parameters": {
+						"opacity": "0"
+					}
+				}
+			],
+			"sid": 414117619325513,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 490963733176566,
+					"parameters": {
+						"variable": "isPuzzles5Done",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 367693636686158,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 659127536157354
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player",
+							"sid": 829716995027547,
+							"parameters": {
+								"instance-variable": "isUnlock5",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 374066235208274,
+							"disabled": true,
+							"parameters": {
+								"seconds": "2"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "DoorUnlockText",
+							"sid": 950406529881126,
+							"parameters": {
+								"text": "\"Door 5 Unlocked (Press E on the door to enter)\""
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "DoorUnlockText",
+							"sid": 323577279807183,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 295754610293128,
+							"parameters": {
+								"seconds": "2"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "DoorUnlockText",
+							"sid": 178734353672029,
+							"parameters": {
+								"opacity": "0"
+							}
+						}
+					],
+					"sid": 950276758668572
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 687628819982792
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "DoorUnlockText",
+					"sid": 335638341686796,
+					"parameters": {
+						"opacity": "0"
+					}
+				}
+			],
+			"sid": 496235175934552,
+			"disabled": true
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "PuzzlesInteract",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player",
+							"sid": 855047493370061,
+							"parameters": {
+								"object": "Puzzle1Interact"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Einteract",
+							"sid": 467232475364763,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 917570096652562
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 863092149752237,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [],
+					"sid": 755395379801089,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Player",
+									"sid": 422730084998921,
+									"parameters": {
+										"object": "Puzzle1Interact"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 182431005199591,
+									"parameters": {
+										"layout": "PictureClue1"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 387718896966406,
+									"parameters": {
+										"audio-file": "556939__fmaudio__tearing-paper-3",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 640130940138381
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player",
+							"sid": 523696517454821,
+							"parameters": {
+								"object": "Puzzle2Interact"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Einteract",
+							"sid": 784819424685863,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 377411334192392
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 939733885093889,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [],
+					"sid": 607536863169772,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Player",
+									"sid": 267939165579774,
+									"parameters": {
+										"object": "Puzzle2Interact"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 411869377534430,
+									"parameters": {
+										"layout": "PictureClue2"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 498130689763305,
+									"parameters": {
+										"audio-file": "556939__fmaudio__tearing-paper-3",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 444901442567175
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player",
+							"sid": 970645943273838,
+							"parameters": {
+								"object": "Puzzle3Interact"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Einteract",
+							"sid": 625515105189061,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 975187248808841
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 950896234754274,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [],
+					"sid": 828131134170253,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Player",
+									"sid": 109500329257821,
+									"parameters": {
+										"object": "Puzzle3Interact"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 198001987911875,
+									"parameters": {
+										"layout": "pictureclue 3"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 534529226294981,
+									"parameters": {
+										"audio-file": "556939__fmaudio__tearing-paper-3",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 837199026777113
+						}
+					]
+				}
+			],
+			"sid": 623547047563588
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 909928752950096
+				},
+				{
+					"id": "is-tag-playing",
+					"objectClass": "Audio",
+					"sid": 473037401818110,
+					"parameters": {
+						"tag": "\"BG\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 475502957043948,
+					"parameters": {
+						"audio-file": "527321__zhr__village-main-theme",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"BG\""
+					}
+				}
+			],
+			"sid": 590278040803628
+		}
+	],
+	"sid": 519619491916340
+}
