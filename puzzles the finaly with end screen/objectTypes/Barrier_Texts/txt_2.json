@@ -1,0 +1,17 @@
+{
+	"name": "txt_2",
+	"plugin-id": "Text",
+	"sid": 216859657733045,
+	"isGlobal": true,
+	"instanceVariables": [
+		{
+			"name": "numberLock",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 298258464694324
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

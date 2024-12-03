@@ -1,0 +1,107 @@
+{
+	"name": "Door3KeyCode Sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 405169760309381,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "KeyCode"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 269653056618677,
+					"parameters": {
+						"layout": "Puzzle3"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 935451659676089,
+					"parameters": {
+						"audio-file": "266152__vacuumfan7072__cfup",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 795426775464606
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 524973735779905
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "Player",
+					"sid": 458181808679949,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Player",
+					"sid": 399865512216172,
+					"behaviorType": "8Direction"
+				}
+			],
+			"sid": 770479938220210
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 401077733496951,
+					"parameters": {
+						"key": 69
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 695494689537785,
+					"parameters": {
+						"layout": "Layout 1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 898438813703583,
+					"parameters": {
+						"audio-file": "266152__vacuumfan7072__cfup",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 940794495253826
+		}
+	],
+	"sid": 524791780059045
+}

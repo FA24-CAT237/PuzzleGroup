@@ -1,0 +1,95 @@
+{
+	"name": "PictureClue Sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 938577226378661,
+					"parameters": {
+						"key": 69
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 547652063145323,
+					"parameters": {
+						"layout": "Layout 1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 348407488212841,
+					"parameters": {
+						"audio-file": "556939__fmaudio__tearing-paper-3",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 219195513476890
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 850853801240064
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "Player",
+					"sid": 754507638551837,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Player",
+					"sid": 527216838107211,
+					"parameters": {
+						"opacity": "0"
+					}
+				}
+			],
+			"sid": 302161959287001
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-end-of-layout",
+					"objectClass": "System",
+					"sid": 686637856754494
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "txt_3",
+					"sid": 916894954451948
+				},
+				{
+					"id": "destroy",
+					"objectClass": "txt_1",
+					"sid": 596523402286337
+				}
+			],
+			"sid": 438744240415348
+		}
+	],
+	"sid": 323335329747970
+}

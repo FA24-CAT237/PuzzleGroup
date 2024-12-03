@@ -1,0 +1,843 @@
+{
+	"name": "Puzzle2 Sheet",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "number4",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 926019793854832
+		},
+		{
+			"eventType": "variable",
+			"name": "number5",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 279647012109360
+		},
+		{
+			"eventType": "variable",
+			"name": "number6",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 213905230448684
+		},
+		{
+			"eventType": "variable",
+			"name": "correct4",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 286732026354818
+		},
+		{
+			"eventType": "variable",
+			"name": "correct5",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 723608170150395
+		},
+		{
+			"eventType": "variable",
+			"name": "correct6",
+			"type": "number",
+			"initialValue": "6",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 610082716387535
+		},
+		{
+			"eventType": "variable",
+			"name": "corretBool4",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 675685309352425
+		},
+		{
+			"eventType": "variable",
+			"name": "corretBool5",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 726453494092412
+		},
+		{
+			"eventType": "variable",
+			"name": "corretBool6",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 694099863532546
+		},
+		{
+			"eventType": "variable",
+			"name": "isPuzzles2Done",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 805372936065439
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Make the number go 1 to 10",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 204482636371523,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "txt_1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 596310061015588,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "txt_1",
+									"sid": 336357356698248,
+									"parameters": {
+										"instance-variable": "numberLock",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 763033319850152,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 535583167570782,
+											"parameters": {
+												"variable": "number4",
+												"comparison": 3,
+												"value": "9"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 955956188289165,
+											"parameters": {
+												"variable": "number4",
+												"value": "1"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 452395554103585,
+											"parameters": {
+												"audio-file": "180969__ueffects__r-key",
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 464649114811261
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 964566270473798,
+											"parameters": {
+												"variable": "number4",
+												"comparison": 5,
+												"value": "10"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 194103280268280,
+											"parameters": {
+												"variable": "number4",
+												"value": "1"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 668861507986594,
+											"parameters": {
+												"audio-file": "180969__ueffects__r-key",
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 333112629063601
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "txt_1",
+									"sid": 565612039578231,
+									"parameters": {
+										"instance-variable": "numberLock",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 748157071193734,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 878584638350778,
+											"parameters": {
+												"variable": "number2",
+												"comparison": 3,
+												"value": "9"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 224943272440270,
+											"parameters": {
+												"variable": "number2",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 591840323034379,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 607472646768547,
+											"parameters": {
+												"variable": "number2",
+												"comparison": 5,
+												"value": "10"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 501439826992908,
+											"parameters": {
+												"variable": "number2",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 587078430175625,
+									"disabled": true
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "txt_1",
+									"sid": 938041957797942,
+									"parameters": {
+										"instance-variable": "numberLock",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 565458453204910,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 113966339100260,
+											"parameters": {
+												"variable": "number3",
+												"comparison": 3,
+												"value": "9"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 433959847047099,
+											"parameters": {
+												"variable": "number3",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 536789239677276,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 592943949403254,
+											"parameters": {
+												"variable": "number3",
+												"comparison": 5,
+												"value": "10"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 195295413629640,
+											"parameters": {
+												"variable": "number3",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 884938532562999,
+									"disabled": true
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 174063441651616
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Every Tick it update the global numbers2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 128815766714972
+						}
+					],
+					"actions": [],
+					"sid": 558553401840288,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "txt_1",
+									"sid": 431308011224821,
+									"parameters": {
+										"instance-variable": "numberLock",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "txt_1",
+									"sid": 167219031945887,
+									"parameters": {
+										"text": "number4"
+									}
+								}
+							],
+							"sid": 480016007729011
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "txt_1",
+									"sid": 340402378197613,
+									"parameters": {
+										"instance-variable": "numberLock",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "txt_1",
+									"sid": 511648491992047,
+									"parameters": {
+										"text": "number2"
+									}
+								}
+							],
+							"sid": 758747533546025,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "txt_1",
+									"sid": 952975678097807,
+									"parameters": {
+										"instance-variable": "numberLock",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "txt_1",
+									"sid": 380010273282148,
+									"parameters": {
+										"text": "number3"
+									}
+								}
+							],
+							"sid": 997042902118940,
+							"disabled": true
+						}
+					]
+				}
+			],
+			"sid": 576416212433936
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Check if it right number2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 112177111721415,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Button"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 435402023388294,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 328160393649938,
+									"parameters": {
+										"variable": "number4",
+										"comparison": 0,
+										"value": "correct4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 827954992065134,
+									"parameters": {
+										"variable": "corretBool4",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "indicater",
+									"sid": 887031855621070,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 871119286119733
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 109819389455666
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 166966227480179,
+									"parameters": {
+										"variable": "corretBool4",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "indicater",
+									"sid": 149731562582888,
+									"parameters": {
+										"frame-number": "0"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 320132847342951,
+									"parameters": {
+										"audio-file": "41349__datasoundsample__lock",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 880323922626026,
+									"parameters": {
+										"audio-file": "249300__suntemple__access-denied",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 232883463472207,
+									"parameters": {
+										"variable": "number4",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "Big_X",
+									"sid": 572290903851073,
+									"parameters": {
+										"opacity": "100"
+									}
+								},
+								{
+									"id": "add-to-instvar",
+									"objectClass": "txt_1",
+									"sid": 674869123655851,
+									"parameters": {
+										"instance-variable": "numberLock",
+										"value": "1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 498717833917096,
+									"parameters": {
+										"seconds": "3"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "txt_1",
+									"sid": 230824926766855,
+									"parameters": {
+										"instance-variable": "numberLock",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-opacity",
+									"objectClass": "Big_X",
+									"sid": 571514860041724,
+									"parameters": {
+										"opacity": "0"
+									}
+								}
+							],
+							"sid": 539299187617252
+						}
+					]
+				}
+			],
+			"sid": 429760683960799
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Check if all Bool is true2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 785894472455048,
+							"parameters": {
+								"variable": "corretBool4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "KeyCode",
+							"sid": 939682530681036,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 731746360759208,
+							"parameters": {
+								"variable": "isPuzzles2Done",
+								"value": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 597169101787883,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Door2",
+							"sid": 700953761140104,
+							"parameters": {
+								"instance-variable": "Variable1",
+								"value": "true"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 920370606107157,
+							"parameters": {
+								"layout": "Layout 1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "txt_1",
+							"sid": 391349072290910
+						}
+					],
+					"sid": 405370118502417
+				}
+			],
+			"sid": 557152741043965
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 831194949817765
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "Player",
+					"sid": 699654472466822,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "Player",
+					"sid": 465302637866854,
+					"parameters": {
+						"opacity": "0"
+					}
+				}
+			],
+			"sid": 491204945176815
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 195126676828022
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "Big_X",
+					"sid": 778077861668548,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "set-z-elevation",
+					"objectClass": "txt_1",
+					"sid": 966399738019437,
+					"parameters": {
+						"z": "1"
+					}
+				}
+			],
+			"sid": 517639622790144
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 888724512180242,
+					"parameters": {
+						"key": 69
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 935897537679592,
+					"parameters": {
+						"layout": "Door2KeyCode layout"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 802118520030328,
+					"parameters": {
+						"audio-file": "266152__vacuumfan7072__cfup",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 259444494819290
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-end-of-layout",
+					"objectClass": "System",
+					"sid": 379329202213009
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "txt_3",
+					"sid": 293061586688179
+				}
+			],
+			"sid": 745971727452311
+		}
+	],
+	"sid": 323009495517652
+}
