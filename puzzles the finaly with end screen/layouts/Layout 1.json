@@ -1555,10 +1555,10 @@
 					"sid": 562234486050310,
 					"tags": "",
 					"instanceVariables": {
-						"isUnlock1": false,
-						"isUnlock2": false,
-						"isUnlock3": false,
-						"isUnlock4": false,
+						"isUnlock1": true,
+						"isUnlock2": true,
+						"isUnlock3": true,
+						"isUnlock4": true,
 						"isUnlock5": false
 					},
 					"behaviors": {
